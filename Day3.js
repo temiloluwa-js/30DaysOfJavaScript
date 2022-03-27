@@ -8,3 +8,14 @@ let sideB = prompt("Enter the second side of the triangle")
 let sideC = prompt("Enter the third side of the trinagle")
 
 alert(`The perimeter of the triangle is ${sideA + sideB + sideC}`)
+
+let userAge = prompt("How old are you?")
+if (userAge >= 18){
+    alert("allowed to drive!")
+}
+
+let noOfYears = prompt("How many years you live?")
+alert(noOfYears * 365 * 24 * 3600)
+
+let date = new Date()
+alert(`${date.getFullYear}  `)
