@@ -1,9 +1,10 @@
-let month = prompt("Enter a month: ")
-
-switch (month.toLowerCase()){
-    case 'september' || 'october' || 'november':
-        alert("Winter")
-        break
-    default:
-        alert("Not a month")
-}
+function findOutlier(integers){
+    let count = 0
+    for (i=0; i<integers.length; i++){
+      if (integers[i] % 2 == 0){
+        count += 1
+      }
+    }if (count > 1){
+        
+    }
+  }

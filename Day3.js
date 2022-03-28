@@ -1,31 +1,27 @@
-// let a  = prompt("Enter the length of the triangle: ")
-// let b = prompt("Enter the breadth of the triangle")
+function shuffleArray(array) {
+  for (i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * i + 1);
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+  return array;
+}
 
-// alert(`The area of the triangle is ${(a * b) / 2}`)
+console.log(shuffleArray([1, 2, 3, 4, 7]));
 
-// let sideA  = prompt("Enter the first side of the triangle: ")
-// let sideB = prompt("Enter the second side of the triangle")
-// let sideC = prompt("Enter the third side of the trinagle")
+function isPrime(number) {
+  let isPrime = true;
+  for (i = 2; i < number; i++) {
+    if (number % i == 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  return isPrime;
+}
 
-// alert(`The perimeter of the triangle is ${sideA + sideB + sideC}`)
+console.log(isPrime(23));
 
-// let userAge = prompt("How old are you?")
-// if (userAge >= 18){
-//     alert("allowed to drive!")
-// }
 
-// let noOfYears = prompt("How many years you live?")
-// alert(noOfYears * 365 * 24 * 3600)
 
-// let date = new Date()
-// alert(`${date.getFullYear}  `)
-
-let arr = []
-let i = 0
-do{
-    random = Math.floor(Math.random() * 5)
-    arr.push(random)
-    i++
-}while(i<5)
-
-alert(arr)
