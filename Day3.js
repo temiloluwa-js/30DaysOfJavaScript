@@ -19,6 +19,8 @@
 
 // let date = new Date()
 // alert(`${date.getFullYear}  `)
-let text = "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python"
-let texta = Array.from(text.split(' '))
-console.log(texta)
+i = 0
+do{
+    alert(`${i} x ${i} = ${i * i}`)
+    i  += 1
+}while(i <= 10)
