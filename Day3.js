@@ -19,8 +19,13 @@
 
 // let date = new Date()
 // alert(`${date.getFullYear}  `)
-i = 0
+
+let arr = []
+let i = 0
 do{
-    alert(`${i} x ${i} = ${i * i}`)
-    i  += 1
-}while(i <= 10)
+    random = Math.floor(Math.random() * 5)
+    arr.push(random)
+    i++
+}while(i<5)
+
+alert(arr)
