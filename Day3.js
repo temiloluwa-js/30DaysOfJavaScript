@@ -1,3 +1,4 @@
+"use strict"
 // const users = {
 //   Alex: {
 //     email: 'alex@alex.com',
@@ -49,37 +50,34 @@
 //     points: 40
 //   },
 
-//   // getSkills: function(){
-//   //   console.log(Object.values(this)[0].skills)
-//   // }
-
+ 
 // }
 
-// function mostSkills(x){
-//   let score = 0
-//   let length = Object.values(x).length
-//   for (i=0; i<length; i++){
-//     if (Object.values(x)[i].isLoggedIn == true){
-//       score
-//     }
-//   }return user
+function mostSkills(x){
+  let score = 0
+  let length = Object.values(x).length
+  for (i=0; i<length; i++){
+    if (Object.values(x)[i].isLoggedIn == true){
+      score
+    }
+  }return user
 
-// }
+}
 
-// function mernStack(x){
-//   let mern_developers = []
-//   let length = Object.keys(x).length
-//   let techs = ['MongoDB', 'Express', 'React', 'Node']
-//   count = 0
-//   for (i=0; i<length; i++){
-//     let dev = Object.values(x)[i].skills
-//     if (dev.includes(techs[0]) && dev.includes(techs[1]) && dev.includes(techs[2]) && dev.includes(techs[3])){
-//       mern_developers.push(Object.entries(x)[i])
-//     }
-//   }return mern_developers
-// }
+function mernStack(x){
+  let mern_developers = []
+  let length = Object.keys(x).length
+  let techs = ['MongoDB', 'Express', 'React', 'Node']
+  count = 0
+  for (i=0; i<length; i++){
+    let dev = Object.values(x)[i].skills
+    if (dev.includes(techs[0]) && dev.includes(techs[1]) && dev.includes(techs[2]) && dev.includes(techs[3])){
+      mern_developers.push(Object.entries(x)[i])
+    }
+  }return mern_developers
+}
 
-// console.log(mernStack(users))
+console.log(mernStack(users))
 
 const users = [
   {
@@ -157,10 +155,10 @@ const products = [
 function signUp() {
   try {
     let user = {};
-    user.id = Math.floor(Math.random() * 100000);
-    user.email = prompt("Enter your email").toString();
-    user.username = prompt("Enter your username").toString();
-    user.password = prompt("Enter your password").toString();
+    user._id = Math.floor(Math.random() * 100000);
+    user.username = prompt("Enter your username");
+    user.email = prompt("Enter your email");
+    user.password = prompt("Enter your password");
     user.createdAt = new Date();
     user.isLoggedIn = false;
 
@@ -172,22 +170,21 @@ function signUp() {
 }
 
 function signIn() {
-  try {
-    let email = prompt("Enter your email").toString();
-    let password = prompt("Enter your password").toString();
-
-    for (i = 0; i < users.length - 1; i++) {
-      let user = Object.keys(users)[i];
-      if (user.email == email && user.password == password) {
-        user.isLoggedIn = true;
-        alert("Sign in sucessful");
-      } else {
-        alert("Incorrect email or password");
-      }
+  let email= prompt("email")
+  let password = prompt("password")
+  let customer = []
+  let length = Object.values(users).length
+  for (let i = 0;  i < length; i++){
+    let user = Object.values(users)[i]
+    if (user.email == email && user.password == password){
+      customer.push(0)
+    }else{
+      null
     }
-  } catch (err) {
-    alert(`${err.name} ${err.message}`);
+  }
+  if (customer.length == 1){
+    alert("log in successful")
+  }else{
+    alert("user not found")
   }
 }
-
-
