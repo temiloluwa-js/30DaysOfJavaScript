@@ -2907,14 +2907,12 @@ const countries_data = [
 
 function getLanguagesSpoken(x){
     languages_list = []
-    for (i=0; i<x.length; i++){
-        language = Object.values(x)[i].languages
-        for (lang of language){
-            languages_list.push(lang)
-        }
-    }
-    var count = 0
-    languages_list.filter
+    for (const {languages} of x){
+		languages_list.push(...languages)
+	}
+	return languages_list
 }
 
 console.log(getLanguagesSpoken(countries_data))
+
+
