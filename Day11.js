@@ -137,3 +137,17 @@ let arrayFilter = arr => {
 
 console.log(arrayFilter(users))
 
+// let pattern = 'love'
+// let regEx = new RegExp(pattern, 'gi')
+
+// let str = 'i love maryam'
+// console.log(regEx.test(str))
+
+// console.log(str.match(/\W/g))
+
+// let str = 'He earns 4000 euro from salary per month, 10000 euro annual bonus, 5500 euro online courses per month.'
+// console.log(str.match(/\d+/gi).map(x => +x).reduce((a, b) => a + b))
+
+let str = "The position of some particles on the horizontal x-axis -12, -4, -3 and -1 in the negative direction, 0 at origin, 4 and 8 in the positive direction. Extract these numbers and find the distance between the two furthest particles."
+
+
