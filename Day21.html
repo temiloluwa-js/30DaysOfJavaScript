@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+    <style>
+        .wrapper{
+            border: 1px solid black;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        li{
+            list-style-type: lower-greek;
+            padding-bottom: 4px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+        <h1>Asabeneh Yetayeh challenges in <span>2020</span></h1>
+        <h2>30DaysOfJavaScript Challenge</h2>
+        <p class="date"></p>
+        <ul>
+            <li class="done">30DaysOfPython Challenge Done</li>
+            <li class="ongoing">30DaysOfJavaScript Challenge Ongoing</li>
+            <li class="coming">30DaysOfReact Challenge Coming</li>
+            <li class="coming">30DaysOfFullStack Challenge Coming</li>
+            <li class="coming">30DaysOfDataAnalysis Challenge Coming</li>
+            <li class="coming">30DaysOfReactNative Challenge Coming</li>
+            <li class="coming">30DaysOfMachineLearning Challenge Coming</li>
+        </ul>
+    </div>
+  </body>
+  <script>
+      let year = document.querySelector('span')
+      let colorlist = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+      let dateItem = document.querySelector('.date')
+      let ongoing = document.querySelector('.ongoing')
+      let done = document.querySelector('.done')
+      let coming = document.getElementsByClassName('coming')
+      dateItem.textContent = new Date()
+      setInterval(function () {dateItem.style.backgroundColor = colorlist[Math.floor(Math.random() * colorlist.length )]}, 1000)
+      setInterval(function () {year.style.color = colorlist[Math.floor(Math.random() * colorlist.length )]}, 1000)
+     ongoing.style.backgroundColor = 'yellow'
+     done.style.backgroundColor = 'green'
+     for (i of coming){
+         i.style.backgroundColor = 'red'
+     }
+  </script>
+</html>
