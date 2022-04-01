@@ -170,3 +170,35 @@ console.log(await square(2))
 //     console.log(weight)
 // })
 
+// function outerFunction(){
+//     let count = 0;
+//     function innerFunction(){
+//         count+=10
+//         return count
+//     }
+//     return innerFunction
+// }
+
+// const innerFunc = outerFunction()
+// console.log(innerFunc())
+
+function outerFunction(){
+    count = 10
+    function innerFunction1(){
+        return count += 1
+    }
+    function innerFunction2(){
+        return count += 2
+    }
+    function innerFunction3(){
+        return count += 3
+    }
+    return {
+        innerFunction1: innerFunction1(),
+        innerFunction2: innerFunction2(),
+        innerFunction3: innerFunction3()
+    }
+}
+
+a = outerFunction().innerFunction1
+console.log(a)
