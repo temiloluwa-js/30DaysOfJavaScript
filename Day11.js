@@ -163,3 +163,18 @@ for (let i=0; i<countries.length; i++){
     console.log(countries[i][0], countries[i][1])
 }
 console.timeEnd('regular for loop')
+
+fetch('http://example.com/movies.json')
+.then(response => response.json())
+.then(data => console.log(data))
+
+const fetchData = async() => {
+  try{
+    const response = await fetch(url)
+    const countries = await response.json()
+    console.log(countries)
+  }catch(err){
+    console.error(err)
+  }
+}
+console.log('==== async and awair')

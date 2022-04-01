@@ -152,10 +152,21 @@ const square = async function (n) {
 }
 console.log(await square(2))
 
-const url = 'https://restcountries.com/v2/all'
-fetch(url)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data)
-    })
-    .catch(error => console.log(error))
+// fetch('https://w3schools.com')
+// .then(response => response.json())
+// .then(data => console.log(data))
+
+// fetch('https://restcountries.com/v2/all')
+// .then(response => response.json())
+// .then(data => console.log(data[0]))
+
+// fetch('https://api.thecatapi.com/v1/breeds')
+// .then(response => response.json())
+// .then(data => {
+//     weight = 0
+//     for (i of data){
+//         weight += parseInt(i.Object.values(weight)[1])
+//     }
+//     console.log(weight)
+// })
+
